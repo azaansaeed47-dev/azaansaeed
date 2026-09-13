@@ -109,6 +109,8 @@ A collection of modern React applications focused on responsive design, reusable
 
 <div align="center">
 
+https://raw.githubusercontent.com/azaansaeed47-dev/azaansaeed47-dev/main/info-card.svg
+
 <a href="https://github.com/AzaanSaeed">
   <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github"/>
 </a>
