@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<defs>
+  <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#050505"/>
+    <stop offset=".55" stop-color="#06180d"/>
+    <stop offset="1" stop-color="#18d957"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .mono{font-family:"Courier New",Courier,monospace}
+    .green{fill:#18d957}
+    .spin{transform-origin:600px 300px;animation:spin 6s linear infinite}
+    .orbit{transform-origin:600px 300px;animation:spin 9s linear infinite}
+    .orbit2{transform-origin:600px 300px;animation:spin2 12s linear infinite}
+    .titleA{animation:titleA 4s ease-in-out infinite}
+    .titleS{animation:titleS 4s ease-in-out infinite}
+    .typing{animation:typing 6s steps(43,end) infinite}
+    .cursor{animation:blink .65s steps(1) infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes spin2{to{transform:rotate(-360deg)}}
+    @keyframes titleA{0%,12%{opacity:0;transform:translateX(-35px)}25%,82%{opacity:1;transform:translateX(0)}100%{opacity:0}}
+    @keyframes titleS{0%,12%{opacity:0;transform:translateX(35px)}25%,82%{opacity:1;transform:translateX(0)}100%{opacity:0}}
+    @keyframes typing{0%,8%{clip-path:inset(0 100% 0 0)}55%,78%{clip-path:inset(0 0 0 0)}90%,100%{clip-path:inset(0 100% 0 0)}}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+</defs>
+
+<rect width="1200" height="700" rx="12" fill="#fff"/>
+<rect x="25" y="25" width="1150" height="650" rx="8" fill="none" stroke="#d7dee3" stroke-width="3"/>
+
+<!-- top -->
+<text x="70" y="75" class="mono green" font-size="18">&gt; Building • Learning • Growing</text>
+<text x="1130" y="75" text-anchor="end" class="mono" fill="#111" font-size="18">● Full-Stack Developer</text>
+
+<!-- Name stays BEHIND the rotating orb -->
+<text x="515" y="325" text-anchor="end" class="mono titleA" fill="#111" font-size="88" font-weight="700">Azaan</text>
+<text x="685" y="325" text-anchor="start" class="mono titleS" fill="#111" font-size="88" font-weight="700">Saeed</text>
+
+<!-- rotating center orb -->
+<g class="spin" filter="url(#glow)">
+  <path d="M548 215 C580 172 657 177 691 228 C725 280 702 349 648 379 C591 411 516 378 501 318 C489 270 515 238 548 215Z" fill="url(#orb)"/>
+  <path d="M530 275 C568 230 646 218 695 259 C659 247 620 267 598 301 C572 341 540 340 515 313Z" fill="#18d957" opacity=".65"/>
+</g>
+
+<!-- smooth rotating orbital rings -->
+<g class="orbit" fill="none" stroke="#18d957" stroke-width="3" opacity=".9">
+  <ellipse cx="600" cy="300" rx="175" ry="75"/>
+</g>
+<g class="orbit2" fill="none" stroke="#18d957" stroke-width="2" opacity=".65">
+  <ellipse cx="600" cy="300" rx="155" ry="95"/>
+</g>
+<circle cx="775" cy="300" r="7" class="green orbit"/>
+<circle cx="425" cy="300" r="7" class="green orbit2"/>
+
+<!-- title crossing the orb -->
+<text x="600" y="405" text-anchor="middle" class="mono" fill="#111" font-size="27" font-weight="700">
+  — Full-Stack Developer —
+</text>
+
+<!-- badges -->
+<g class="mono">
+  <rect x="330" y="450" width="125" height="44" rx="4" fill="#050505"/>
+  <text x="392" y="478" text-anchor="middle" fill="#fff" font-size="15">● STATUS</text>
+  <rect x="455" y="450" width="220" height="44" rx="4" fill="#18d957"/>
+  <text x="565" y="478" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">OPEN TO WORK</text>
+  <rect x="675" y="450" width="115" height="44" rx="4" fill="#050505"/>
+  <text x="732" y="478" text-anchor="middle" fill="#fff" font-size="15">BASED</text>
+  <text x="808" y="478" fill="#111" font-size="15" font-weight="700">PAKISTAN</text>
+</g>
+
+<!-- animated typewriter line -->
+<text x="150" y="575" class="mono green" font-size="28" font-weight="700">&gt;</text>
+<text x="185" y="575" class="mono typing" fill="#111" font-size="28" font-weight="700">Write code that works. Then code that lasts.</text>
+<rect x="184" y="548" width="4" height="34" class="green cursor">
+  <animate attributeName="x" values="184;850;184" dur="6s" repeatCount="indefinite"/>
+</rect>
+
+<text x="600" y="625" text-anchor="middle" class="mono green" font-size="16">// Nightcoder • Build • Learn • Grow</text>
+</svg>
